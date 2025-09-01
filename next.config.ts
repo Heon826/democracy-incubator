@@ -19,7 +19,14 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.resolve(dirname, '../../'),
   turbopack: {
     rules: {
-      "*.{jsx,tsx}": {
+      ".{jsx,tsx}": {
+        loaders: [LOADER]
+      }
+    }
+  },
+  turbopack: {
+    rules: {
+      ".{jsx,tsx}": {
         loaders: [LOADER]
       }
     }
